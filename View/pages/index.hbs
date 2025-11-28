@@ -1,0 +1,26 @@
+<table class="cool-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each result.data}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.age}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="pages">
+    {{#times result.count}}
+    <a href="http://localhost:3000?id={{this}}">
+        <button>{{this}}</button>
+    </a>
+    {{/times}}
+</div>
